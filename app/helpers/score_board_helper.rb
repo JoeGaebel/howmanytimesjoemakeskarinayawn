@@ -1,0 +1,2 @@
+module ScoreBoardHelper
+end
