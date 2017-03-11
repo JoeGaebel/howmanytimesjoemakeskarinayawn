@@ -1,3 +1,10 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$(document).ready ->
+  setInterval(refreshPartial, 1500)
+
+refreshPartial = ->
+  $.ajax
+    method: 'post'
+    url: "score_board/score"
+    data:
+      yawn:
+        increment: false

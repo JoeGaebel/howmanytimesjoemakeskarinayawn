@@ -1,4 +1,20 @@
-<div class="row">
-  <div class="col-md-3 col-md-offset-4"><h1>Joe</h1></div>
-  <div class="col-md-3"><h1>Karina</h1></div>
+<div class="row vertical-center">
+  <div class="col-md-1 col-xs-5 col-xs-offset-1 col-md-offset-4">
+    <h1>Joe</h1>
+    <h2 class="joe-yawn-count"><%= @joe_yawns %></h2>
+    <%= form_for(:yawn, url: score_board_score_path, remote: true) do |f| %>
+      <%= f.submit "He Yawned", class: "btn btn-primary" %>
+      <%= f.hidden_field :is_joe, value: true %>
+      <%= f.hidden_field :increment, value: true %>
+    <% end %>
+  </div>
+  <div class="col-md-1 col-md-offset-2">
+    <h1>Karina</h1>
+    <h2 class="karina-yawn-count"><%= @karina_yawns %></h2>
+    <%= form_for(:yawn, url: score_board_score_path, remote: true) do |f| %>
+      <%= f.submit "She Yawned", class: "btn btn-primary" %>
+      <%= f.hidden_field :is_joe, value: false %>
+      <%= f.hidden_field :increment, value: true %>
+  <% end %>
+  </div>
 </div>

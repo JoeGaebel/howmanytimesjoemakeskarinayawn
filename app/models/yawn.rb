@@ -1,0 +1,2 @@
+class Yawn < ApplicationRecord
+end
