@@ -10,7 +10,7 @@
     <h1>Joe</h1>
     <h2 class="joe-yawn-count"><%= @joe_yawns %></h2>
     <%= form_for(:yawn, url: score_board_score_path, remote: true) do |f| %>
-      <%= f.submit "He Yawned", class: "btn btn-primary" %>
+      <%= f.submit "He Yawned", class: "btn btn-primary", :onclick => "areYouSure();"%>
       <%= f.hidden_field :is_joe, value: true %>
       <%= f.hidden_field :increment, value: true %>
     <% end %>
@@ -25,3 +25,13 @@
   <% end %>
   </div>
 </div>
+<script>
+  function areYouSure() {
+    var first = confirm("Are you sure? It seems kind of odd... did Joe really yawn?");
+    if (first) {
+      return confirm("Are you really sure?");
+    } else {
+      return false;
+    }
+  }
+</script>
