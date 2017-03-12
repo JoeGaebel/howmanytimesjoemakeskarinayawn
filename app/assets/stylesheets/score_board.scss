@@ -1,9 +1,21 @@
 .vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
+  min-height: 50%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 50vh; /* These two lines are counted as one :-)       */
 
   display: flex;
   align-items: center;
+}
+
+.blocky {
+  font-family: 'Alice', serif;
+}
+
+.title {
+  text-align: center;
+}
+
+.scripty {
+  font-family: 'Sacramento', cursive;
 }
 
 .col-md-1, .alert {

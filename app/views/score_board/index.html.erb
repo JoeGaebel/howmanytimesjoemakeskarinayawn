@@ -1,8 +1,11 @@
 <% if flash[:error] %>
   <div class="alert alert-danger"><%= flash[:error] %></div>
 <% end %>
-
-<div class="row vertical-center">
+<div class="row title blocky">
+  <h1>It's not a competition</h1>
+  <h2 class="scripty">(It is a competition)</h2>
+</div>
+<div class="row vertical-center blocky">
   <div class="col-md-1 col-xs-5 col-xs-offset-1 col-md-offset-4">
     <h1>Joe</h1>
     <h2 class="joe-yawn-count"><%= @joe_yawns %></h2>
