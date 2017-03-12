@@ -1,0 +1,2 @@
+heroku pg:reset DATABASE --confirm howmanytimesjoemakeskarinayawn &&
+heroku run rails db:migrate

@@ -20,6 +20,8 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
+  gem 'pry'
+  gem 'pry-nav'
 end
 
 group :development do
