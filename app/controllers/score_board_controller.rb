@@ -17,6 +17,8 @@ class ScoreBoardController < ApplicationController
     end
   end
 
+  private
+
   def yawn_params
     params.require(:yawn).permit(:is_joe, :increment)
   end
@@ -25,8 +27,6 @@ class ScoreBoardController < ApplicationController
     @joe_yawns = Yawn.where(is_joe: true).count
     @karina_yawns = Yawn.where(is_joe: false).count
   end
-
-  private
 
   def authenticate_user
     if yawn_params[:increment] == "true"
